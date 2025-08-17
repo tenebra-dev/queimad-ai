@@ -1,0 +1,23 @@
+{
+  "name": "queimad-ai",
+  "version": "1.0.0",
+  "description": "Sistema Open Source de Detecção de Queimadas",
+  "private": true,
+  "scripts": {
+    "dev": "cd api && pnpm dev",
+    "build": "cd api && pnpm build",
+    "test": "cd api && pnpm test",
+    "install:all": "pnpm install && cd ai-core && pip install -r requirements.txt",
+    "setup": "pnpm install:all",
+    "ai:ui": "cd ai-core && python video_ui.py",
+    "test:api": "python test_api.py"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3"
+  },
+  "packageManager": "pnpm@8.6.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
