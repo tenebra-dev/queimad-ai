@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - REDIS_URL=redis://redis:6379
+      - AI_SERVICE_URL=http://ai-core:8000
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+      - ./uploads:/app/uploads
+    depends_on:
+      - redis
+      - ai-core
+    command: npm run dev
+
+  ai-core:
+    build:
+      context: ./ai-core
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./ai-core:/app
+      - ./models:/app/models
+      - ./datasets:/app/datasets
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
