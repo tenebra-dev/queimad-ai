@@ -77,13 +77,23 @@ logs/
 # Docker
 .dockerignore
 
-# ML/AI
+# ML/AI Models and Training Data
 *.h5
 *.hdf5
 *.pkl
 *.pickle
+*.safetensors
 wandb/
 mlruns/
+
+# Model directories (trained models should not be in git)
+ai-core/models/trained/
+ai-core/models/checkpoints/
+ai-core/test_reports/
+
+# Keep model directory structure but ignore trained models
+!ai-core/models/
+!ai-core/models/.gitkeep
 
 # Media files (for testing only, not for git)
 *.mp4
