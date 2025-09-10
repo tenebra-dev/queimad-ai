@@ -11,6 +11,23 @@
 
 O **QueimadAI** é uma solução open-source que utiliza inteligência artificial avançada para detectar queimadas automaticamente através de análise de imagens e vídeos. Nosso objetivo é democratizar o acesso à tecnologia de detecção precoce de incêndios florestais no Brasil, oferecendo uma solução robusta, precisa e acessível.
 
+## 📦 Preparação do Dataset (OBRIGATÓRIO)
+
+⚠️ **IMPORTANTE**: O dataset não está incluído no repositório devido ao tamanho (223MB). Você deve baixá-lo separadamente:
+
+### 🔥 Dataset YOLOv8 Fire Detection
+1. **Baixe o dataset:** [Roboflow Wildfire Dataset](https://universe.roboflow.com/test0-sbyyu/wildfire-soeq8/dataset/10)
+2. **Formato:** YOLOv8
+3. **Salve como:** `ai-core/datasets/wildfire.v10-origin.yolov8.zip`
+4. **Extraia:** Ver instruções em `ai-core/README.md`
+
+```bash
+# Após clonar o repositório:
+cd ai-core/datasets/
+# Coloque o arquivo wildfire.v10-origin.yolov8.zip aqui
+# Extraia conforme instruções no README
+```
+
 ## 🚀 Status do Projeto
 
 ### ✅ Core de IA Implementado

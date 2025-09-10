@@ -14,12 +14,12 @@ models/
 ## Uso
 
 ### Treinamento
-- Execute `python quick_train.py` para treinar um novo modelo
+- Execute `python legacy/quick_train.py` para treinar um novo modelo
 - Os modelos serão salvos automaticamente em `trained/` com timestamp
 - O último modelo será salvo como `trained_fire_detection_model.h5` para facilitar os testes
 
 ### Teste
-- Execute `python test-model.py` para testar o modelo treinado
+- Execute `python legacy/test_model.py` para testar o modelo treinado
 - O script procura automaticamente por `models/trained/trained_fire_detection_model.h5`
 
 ## Nota sobre Git

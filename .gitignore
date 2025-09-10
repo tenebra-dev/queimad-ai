@@ -95,6 +95,9 @@ ai-core/test_reports/
 !ai-core/models/
 !ai-core/models/.gitkeep
 
+# Extracted Datasets (arquivo ZIP é muito grande para GitHub)
+ai-core/datasets/
+
 # Media files (for testing only, not for git)
 *.mp4
 *.avi
